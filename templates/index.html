@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Mission</title>
+  <link rel="stylesheet" href="reset.css"> 
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1><strong>Mission to Mars</strong> </h1>
+      <p>Mars provides great opportunities for exploring. Come along..,</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Here we GO!</a></p>
+    </div>
+    <div>
+      <h3><strong>Latest Mars News:</strong></h2>
+        <h4><strong>{{ marsdata.news_title }} from </strong> </h4>
+        <p>From: <a href="https://mars.nasa.gov/news/"> https://mars.nasa.gov/news/</a></p>
+        <p>{{ marsdata.news_desc }}</p>
+    </div>
+    <div class="row">
+      <article>
+      <div class="col-md-8">
+        <div>
+          <h3><strong>Featured Mars Image: </strong></h2>
+            <img src={{ marsdata.featured_link[0] }} width=610px height=557px alt="Mars Image"></img>
+            <!-- <a href="https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"> https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars</a> -->
+        </div>
+      <div>
+      </article>
+      <div class="col-md-4">
+        <article>
+          <div class="row">
+          <div style="border: 5px solid steelblue; padding: 5px">
+          <h5><strong>Current Weather on Mars: </strong></h5>
+            <p>{{ marsdata.mars_weather }}</p>
+          </div></div>
+          
+        </article>
+        <article>  
+          <div class="row">
+            <div style="border: 5px solid steelblue; padding: 5px">
+            <h5><strong>Mars Facts:</strong></h4>
+            <p>The following are facts taken from:<a href="https://space-facts.com/mars/"> https://space-facts.com/mars/</a></p>
+            {{ marsdata.mars_facts|safe }} 
+            </div>
+          </div>
+ 
+          </article>
+      </div>
+    <div class="container">
+      <article>
+        <div class="row"> 
+        <div class="col-md-12">
+          <h3 style="text-align: center; padding: 20px; border-bottom: 2px solid steelblue;"><strong>Mars Hemispheres</strong></h3>
+        </div>
+        </div>
+        <div class="row" style="margin-left: 10px;">
+          <p>Hemisphere image is supposed to display here from <a href="https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars">https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars</a</p>
+        </div> 
+          {% for hem in marsdata.mars_hemispheres %}
+        <div class="card" style="width: 30rem; float: left; border: 2px solid steelblue; padding: 20px; text-align: center; margin-left: 60px;"><strong>
+            <img src={{hem.img_url }} class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text"> {{hem.title}}</p>
+            </strong></div>
+        </div>   
+        {% endfor %} 
+      </div> 
+      </article>
+    </div>  
+
+</body>
+
+</html>

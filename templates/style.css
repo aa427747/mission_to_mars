@@ -1,0 +1,148 @@
+body {
+    background: ghostwhite;
+    margin-left: 15px;
+    margin-right: 10px;
+    /* border: 1px dashed black; */
+}
+
+.container{
+    margin-left: 20px;
+    margin-right: 5px;
+    border-left: red;}
+
+/* Sumamry Section - First column after the Left Navigation - Index, Comparison,  */
+
+.testing{
+    padding: 30px;
+    margin-top: 32px;
+    background: white;
+}
+.indeximg1{float: left;}    
+
+/* Main heading on each of the pages. */
+h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: blue; }
+
+/* This is for the EM marker on the Comparison page. */
+.testing em{font-size: 12px;}
+
+/* This the image on the index page */
+.testing img{
+    display: block;
+    margin: 0 auto;}
+
+/* These are the headings for each of the figures on the Comparison page.  */
+h5 {
+    text-align: center;
+    padding: 10px;
+    color: blue;}
+
+/* Border around the Vizuliation figure in each Vizulization page. */
+.Visborder{
+    border: 5px solid steelblue;}
+
+/* Data Page Table heading style */
+thead{
+    background: lightsteelblue;
+    font-weight: 1000;
+    text-align: center;
+}
+
+.Datadesc{
+    margin-top: 20px;
+    font-family: Matura MT Script Capitals;
+    font-size: 18px;
+}
+
+
+/* --------------- NOT USED ---------------------------- */
+/* .collapse navbar-collapse li a{
+    float: right;
+    margin-top: 10px; */
+/* } */
+.latitude{
+    background-color: lightseagreen;
+    color:white;
+    font-size:30px
+}
+/* Left Navigation Bar - Index page,  */
+.sidebar-leftnav h6{
+    text-align: center;
+    font: 12px;}
+
+.sidebar-leftnav{
+    background: #007bff;
+    float: left;
+    color: white;
+    margin-top: 32px;
+    padding-right: 1px;
+    padding-left: 10px;
+    word-wrap: break-word;}
+
+.leftnav{list-style: none}
+
+.sidebar-leftnav u1 li a{
+    color: white;
+    font-size: 12px;}
+
+.Summary{
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    background: white;
+    padding: 30px;
+}
+
+.VisSummary img{
+    display: block;
+    margin: 0 auto;}
+
+/* This is the Summary section on each of teh Visualization detail pages. */
+.VisSummary{
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    background: white;
+    margin-top: 42px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 10px;
+    border-spacing: 10px;}
+
+.Visualization{ 
+    /* float: right; */
+    background: white;
+    /* display: block; */
+    /* border-spacing: 50px; */
+    /* position: relative; */
+    margin-top: 50px;
+    margin-bottom: 150px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+    /* text-align: center; */
+    /* padding-bottom: 10px; */
+}
+.Visualizationimages{ 
+    background: white;
+    display: inline-block;
+        /* margin: 0 auto; */
+        /* text-align: center; */
+       
+        /* border-spacing: 20px; */
+        /* padding-left: 10px; */
+        /* padding-right: 10px; */
+    }
+
+.Summaryv{
+    /* font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px; */
+    background: white;
+    /* margin-top: 42px;
+    margin-bottom: 20px; */
+    /* padding-right: 1px;
+    padding-left: 1px; */
+}
